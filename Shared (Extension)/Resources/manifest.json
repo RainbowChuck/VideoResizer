@@ -1,0 +1,26 @@
+
+{
+  "manifest_version": 3,
+  "name": "Video Resizer",
+  "version": "1.0.0",
+  "description": "Автоматическое изменение размера видеоплеера Boomstream",
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Video Resizer",
+    "default_popup": "popup.html"
+  }
+}
